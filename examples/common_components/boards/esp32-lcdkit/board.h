@@ -45,9 +45,9 @@ typedef enum {
 #define BOARD_IO_I2C0_SCL 3
 #define BOARD_IO_I2C0_SDA 1
 
-#define BOARD_IO_SPI2_SCK 22
-#define BOARD_IO_SPI2_MOSI 21
-#define BOARD_IO_SPI2_MISO 27
+#define BOARD_IO_SPI2_SCK 18
+#define BOARD_IO_SPI2_MOSI 23
+#define BOARD_IO_SPI2_MISO 19
 
 /*Definations of Peripheral*/
 #define BOARD_I2C0_MODE I2C_MODE_MASTER
@@ -62,9 +62,9 @@ typedef enum {
 #define BOARD_LCD_SPI_MOSI_PIN BOARD_IO_SPI2_MOSI
 #define BOARD_LCD_SPI_CLK_PIN BOARD_IO_SPI2_SCK
 #define BOARD_LCD_SPI_CS_PIN 5
-#define BOARD_LCD_SPI_DC_PIN 19
-#define BOARD_LCD_SPI_RESET_PIN 18
-#define BOARD_LCD_SPI_BL_PIN 23
+#define BOARD_LCD_SPI_DC_PIN 4
+#define BOARD_LCD_SPI_RESET_PIN 22
+#define BOARD_LCD_SPI_BL_PIN 15
 
 #define BOARD_LCD_I2S_BITWIDTH 16
 #define BOARD_LCD_I2S_PORT_NUM 0
@@ -100,7 +100,7 @@ typedef enum {
  * When both the screen and the touch panel are SPI interfaces, 
  * they can choose to share a SPI host. The board ESP32-LCDKit is this.
  */
-#define BOARD_TOUCH_SPI_CS_PIN 32
+#define BOARD_TOUCH_SPI_CS_PIN 14
 
 #define BOARD_TOUCH_I2C_PORT_NUM 0
 #define BOARD_TOUCH_I2C_SCL_PIN BOARD_IO_I2C0_SCL

@@ -14,6 +14,13 @@ if BOARD_ESP32_DEVKITC_V4
             help
                 if yes, spi2 will be initialized with default configuration during board init,
                 then, you can use iot_board_get_handle to get the bus handle.
+
+        config BOARD_AZTOUCH_INIT
+            bool "init AZ-Touch peripherals"
+            default n
+            help
+                if yes, az-touch peripherals will be initialized with default configuration during board init,
+                then, you can use iot_board_get_handle to get the bus handle.
     endmenu
 
 endif # BOARD_ESP32_DEVKITC_V4

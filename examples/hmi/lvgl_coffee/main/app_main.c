@@ -514,10 +514,10 @@ void app_main(void)
 
     scr_controller_config_t lcd_cfg = {
         .interface_drv = iface_drv,
-        .pin_num_rst = 18,
-        .pin_num_bckl = 23,
+        .pin_num_rst = BOARD_LCD_SPI_RESET_PIN,
+        .pin_num_bckl = BOARD_LCD_SPI_BL_PIN,
         .rst_active_level = 0,
-        .bckl_active_level = 1,
+        .bckl_active_level = 0,
         .offset_hor = 0,
         .offset_ver = 0,
         .width = 240,
@@ -531,7 +531,7 @@ void app_main(void)
         .interface_spi = {
             .spi_bus = spi2_bus,
             .pin_num_cs = BOARD_TOUCH_SPI_CS_PIN,
-            .clk_freq = 10000000,
+            .clk_freq = 1000000,
         },
         .interface_type = TOUCH_PANEL_IFACE_SPI,
         .pin_num_int = -1,

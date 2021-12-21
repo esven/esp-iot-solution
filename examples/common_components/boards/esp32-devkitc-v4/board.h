@@ -64,6 +64,24 @@ typedef void* board_res_handle_t;
 #define BOARD_I2C0_SCL_PULLUP_EN _ENABLE
 #define BOARD_I2C0_SDA_PULLUP_EN _ENABLE
 
+/**< Screen interface pins */
+#define BOARD_LCD_SPI_HOST 1
+#define BOARD_LCD_SPI_CLOCK_FREQ 20000000
+#define BOARD_LCD_SPI_MISO_PIN BOARD_IO_SPI2_MISO
+#define BOARD_LCD_SPI_MOSI_PIN BOARD_IO_SPI2_MOSI
+#define BOARD_LCD_SPI_CLK_PIN BOARD_IO_SPI2_SCK
+#define BOARD_LCD_SPI_CS_PIN 5
+#define BOARD_LCD_SPI_DC_PIN 4
+#define BOARD_LCD_SPI_RESET_PIN 22
+#define BOARD_LCD_SPI_BL_PIN 15
+
+/**< Touch panel interface pins */
+/**
+ * When both the screen and the touch panel are SPI interfaces, 
+ * they can choose to share a SPI host. The board ESP32-LCDKit is this.
+ */
+#define BOARD_TOUCH_SPI_CS_PIN 14
+
 #ifdef __cplusplus
 extern "C"
 {

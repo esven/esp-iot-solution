@@ -82,6 +82,7 @@ static void _get_point(int8_t index, point_t *cross, point_t *point)
         _draw_touch_Point(cross[index-1].x, cross[index-1].y, COLOR_WHITE);
     }
     _draw_touch_Point(cross[index].x, cross[index].y, COLOR_RED);
+    ESP_LOGI(TAG, "[%d] X:%d Y:%d", index, cross[index].x, cross[index].y);
 
     vTaskDelay(1000 / portTICK_PERIOD_MS);
     while (!g_touch_is_pressed()) {
@@ -228,11 +229,13 @@ esp_err_t touch_calibration_run(const scr_driver_t *screen,
     scr_dir_t old_dir = lcd_info.dir;
 
     uint8_t index = 0;
-    uint32_t w = lcd_info.width;
-    uint32_t h = lcd_info.height;
+    uint32_t h = lcd_info.width;
+    uint32_t w = lcd_info.height;
     point_t cross[4];
     point_t points[4];
     uint32_t calibrate_error = 100;
+
+    ESP_LOGI(TAG, "[SCREEN] W:%d H:%d", w, h);
 
     /**
      * |----------------------|

@@ -216,7 +216,7 @@ void app_main(void)
         .pin_num_rst = BOARD_LCD_SPI_RESET_PIN,
         .pin_num_bckl = BOARD_LCD_SPI_BL_PIN,
         .rst_active_level = 0,
-        .bckl_active_level = 1,
+        .bckl_active_level = 0,
         .offset_hor = 0,
         .offset_ver = 0,
         .width = 240,
